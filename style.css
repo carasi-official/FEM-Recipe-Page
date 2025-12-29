@@ -57,6 +57,10 @@ h2, h3{
     color: var(--rose800)
 }
 
+hr{
+    border: 1px solid var(--stone150)
+}
+
 main{
     display: flex;
     margin: 75px 0;
@@ -126,7 +130,15 @@ ol li::marker{
     border-radius: 10px;
 }
 
+.recipeNutritionCard{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
 
+.recipeNutritionRow{
+    display: flex;
+}
 
 /* attribution */
 
