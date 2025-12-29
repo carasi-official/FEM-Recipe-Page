@@ -39,7 +39,7 @@ body, p, h1, h2, h3{
 body{
     background-color: var(--stone150);
     font-family: "outfit", sans-serif;
-    color: var(--stone900);
+    color: var(--stone600);
     font-weight: 400;
     font-size: 12px;
     display: flex;
@@ -50,23 +50,21 @@ body{
 
 h1, h2{
     font-family: "young-serif", sans-serif;
-    font-weight: 400;
+    color: var(--stone900);
+}
+
+h1{
+    font-weight: 700;
 }
 
 h2, h3{
-    color: var(--rose800)
+    color: var(--rose800);
+    font-weight: 400;
 }
 
 hr{
-    border: 1px solid var(--stone150)
-}
-
-main{
-    display: flex;
-    margin: 75px 0;
-    background-color: var(--white);
-    border-radius: 20px;
-    padding: 30px;
+    border: 1px solid var(--stone150);
+    width: 80%;
 }
 
 .emphasis{
@@ -100,45 +98,84 @@ ol li::marker{
     margin-left: 16px;
 }
 
-.recipeCard{
+main{
+    display: flex;
+    background-color: var(--white);
+}
+
+@media (width >= 500px) {
+    main{
+        margin: 75px 0;
+        border-radius: 20px;
+        padding: 30px;
+    }
+
+    .recipeHero {
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+}
+
+@media (width < 500px){
+    .recipeSummary,.recipeIngredients,.recipeInstructions, .recipeNutritionCard{
+        margin: 0 30px;
+    }
+}
+
+.recipeCard {
     display: flex;
     flex-direction: column;
     gap: 24px;
     align-items: center;
     justify-content: center;
-    width: 500px;
+    max-width: 500px;
 }
 
-.recipeCard *{
+.recipeCard * {
     width: 100%;
 }
 
-.recipeIntro{
+.recipeIntro {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.recipeHero{
-    overflow: hidden;
-    border-radius: 10px;
-}
 
-.recipeSummary{
+
+.recipeSummary {
     background-color: var(--rose50);
     padding: 16px;
     border-radius: 10px;
 }
 
-.recipeNutritionCard{
+.recipeNutritionCard {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.recipeNutritionRow{
+.recipeNutritionTable {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.recipeNutritionRow {
     display: flex;
 }
+
+.recipeNutritionRow p {
+    padding-left: 24px;
+}
+
+.recipeNutritionStats {
+    color: var(--rose800);
+    font-weight: 600;
+}
+
+
 
 /* attribution */
 
@@ -150,11 +187,11 @@ footer{
     display: flex;
     align-items: center;
     gap: 16px;
-    color: var(--white);
+    color: var(--stone600);
 }
 
 a, a:active, a:visited{
-    color: var(--green);
+    color: var(--rose800);
 }
 
 .credits{
@@ -165,7 +202,7 @@ a, a:active, a:visited{
 
 .credits:hover{
     cursor: pointer;
-    color: var(--green);
+    color: var(--rose800);
 }
 
 #arrow{
