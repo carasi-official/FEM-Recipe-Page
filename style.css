@@ -64,7 +64,7 @@ h2, h3{
 
 hr{
     border: 1px solid var(--stone150);
-    width: 80%;
+    padding: 0;
 }
 
 .emphasis{
@@ -103,36 +103,15 @@ main{
     background-color: var(--white);
 }
 
-@media (width >= 500px) {
-    main{
-        margin: 75px 0;
-        border-radius: 20px;
-        padding: 30px;
-    }
-
-    .recipeHero {
-        overflow: hidden;
-        border-radius: 10px;
-    }
-
-}
-
-@media (width < 500px){
-    .recipeSummary,.recipeIngredients,.recipeInstructions, .recipeNutritionCard{
-        margin: 0 30px;
-    }
-}
-
 .recipeCard {
     display: flex;
     flex-direction: column;
-    gap: 24px;
     align-items: center;
     justify-content: center;
     max-width: 500px;
 }
 
-.recipeCard * {
+.recipeCard div, .recipeCard img{
     width: 100%;
 }
 
@@ -142,12 +121,14 @@ main{
     gap: 16px;
 }
 
-
-
 .recipeSummary {
-    background-color: var(--rose50);
-    padding: 16px;
     border-radius: 10px;
+}
+
+.recipeSummaryContainer{
+    background-color: var(--rose50);
+    border-radius: 10px;
+    padding: 16px;
 }
 
 .recipeNutritionCard {
@@ -164,10 +145,13 @@ main{
 
 .recipeNutritionRow {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .recipeNutritionRow p {
     padding-left: 24px;
+    width: 50%;
 }
 
 .recipeNutritionStats {
@@ -175,17 +159,13 @@ main{
     font-weight: 600;
 }
 
-
-
 /* attribution */
 
 footer{
     font-size: clamp(12px, 14px, 14px);
-    position: absolute;
-    top: 95%;
-    padding-left: 24px;
+    padding: 16px;
     display: flex;
-    align-items: center;
+    width: 100%;
     gap: 16px;
     color: var(--stone600);
 }
@@ -211,4 +191,41 @@ a, a:active, a:visited{
 
 .attribution{
     display: none;
+}
+
+@media (width >= 500px) {
+    main{
+        margin: 75px 0;
+        border-radius: 20px;
+        padding: 40px;
+    }
+
+    .recipeHero {
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    .recipeCard{
+        gap: 32px;
+    }
+
+    hr{
+        width: 100%;
+    }
+
+}
+
+@media (width < 500px){
+    .recipeSummary,.recipeIngredients,.recipeInstructions, .recipeNutritionCard, .recipeIntro{
+        margin: 0 30px;
+        padding: 24px;
+    }
+
+    .recipeCard{
+        gap: 16px;
+    }
+
+    hr{
+        width: 85%;
+    }
 }
