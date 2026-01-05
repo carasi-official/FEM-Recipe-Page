@@ -41,7 +41,7 @@ body{
     font-family: "outfit", sans-serif;
     color: var(--stone600);
     font-weight: 400;
-    font-size: 12px;
+    font-size: 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -53,13 +53,22 @@ h1, h2{
     color: var(--stone900);
 }
 
-h1{
-    font-weight: 700;
-}
-
 h2, h3{
     color: var(--rose800);
     font-weight: 400;
+}
+
+h1{
+    font-weight: 700;
+    font-size: 40px;
+}
+
+h2{
+    font-size: 28px;
+}
+
+h3{
+    font-size: 20px;
 }
 
 hr{
@@ -109,6 +118,7 @@ main{
     align-items: center;
     justify-content: center;
     max-width: 500px;
+    gap: 32px;
 }
 
 .recipeCard div, .recipeCard img{
@@ -205,10 +215,6 @@ a, a:active, a:visited{
         border-radius: 10px;
     }
 
-    .recipeCard{
-        gap: 32px;
-    }
-
     hr{
         width: 100%;
     }
@@ -216,13 +222,14 @@ a, a:active, a:visited{
 }
 
 @media (width < 500px){
-    .recipeSummary,.recipeIngredients,.recipeInstructions, .recipeNutritionCard, .recipeIntro{
+    .recipeSummary,.recipeIngredients,.recipeInstructions, .recipeIntro{
         margin: 0 30px;
-        padding: 24px;
+        padding: 0 24px;
     }
 
-    .recipeCard{
-        gap: 16px;
+    .recipeNutritionCard{
+        margin: 0 30px;
+        padding: 0 24px 48px 24px;
     }
 
     hr{
